@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  links: {
+    textDecoration: "none",
+    color: "white",
+  },
 }));
 
 const Header = () => {
@@ -29,13 +33,19 @@ const Header = () => {
             LOGO
           </Typography>
           <Button color="inherit">
-            <Link to="/">Products</Link>
+            <Link className={classes.links} to="/">
+              Products
+            </Link>
           </Button>
           <Button color="inherit">
-            <Link to="/blogs">Blogs</Link>
+            <Link className={classes.links} to="/blogs">
+              Blogs
+            </Link>
           </Button>
           <Button color="inherit">
-            <Link to="/contact">Get Help</Link>
+            <Link className={classes.links} to="/contact">
+              Get Help?
+            </Link>
           </Button>
         </Toolbar>
       </AppBar>
