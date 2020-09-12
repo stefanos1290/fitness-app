@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -30,18 +29,16 @@ const ProductBlock = (props) => {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.img}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.product}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        className={classes.media}
+        image={props.img}
+        title="Contemplative Reptile"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {props.product}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Link to={route} className={classes.link}>
           <Button size="small" color="primary">

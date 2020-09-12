@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { mockedData } from "../mocks/blogs.mock";
 
-const mockedData = {
-  name: "stefanos",
-  lastName: "oxinos",
-};
 const SingleBlog = () => {
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
-
   useEffect(() => {
     if (typeof id !== "undefined") {
-      setData(mockedData);
+      const index = mockedData.findIndex((x) => x.id === id);
+      setData(mockedData[index]);
+      setLoading(false);
     }
   }, [id]);
-
-  if (!id) {
-    return <div>error</div>;
+  if (loading) {
+    return <>Loading</>;
   }
+
   return (
     <>
-      <h1>SINGLE BLOG {id}</h1>
-      {data.name}
+      <h1>{data.title}</h1>
     </>
   );
 };

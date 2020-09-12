@@ -4,7 +4,6 @@ import { mockedData } from "../mocks/products.mock";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -38,22 +37,19 @@ const SingleProduct = () => {
   }
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={data.img}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {data.product}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <CardMedia
+        className={classes.media}
+        image={data.img}
+        title="Contemplative Reptile"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {data.product}
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {data.description}
+        </Typography>
+      </CardContent>
       <CardActions>
         <Button size="small" color="primary">
           Share
