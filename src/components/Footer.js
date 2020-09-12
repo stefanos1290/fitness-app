@@ -13,9 +13,9 @@ const Fotter = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      {/* <AppBar position="static">
+      <AppBar position="static">
         <Toolbar></Toolbar>
-      </AppBar> */}
+      </AppBar>
     </div>
   );
 };
