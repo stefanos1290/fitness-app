@@ -7,13 +7,17 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  AppBar: {
+    // height: "100px",
+    // bottom: 0,
+  },
 }));
 
 const Fotter = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.AppBar} position="static">
         <Toolbar></Toolbar>
       </AppBar>
     </div>

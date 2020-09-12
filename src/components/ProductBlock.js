@@ -19,6 +19,9 @@ const useStyles = makeStyles({
   link: {
     textDecoration: "none",
   },
+  price: {
+    alignSelf: "flex-end",
+  },
 });
 
 const ProductBlock = (props) => {
@@ -45,7 +48,9 @@ const ProductBlock = (props) => {
             BUY
           </Button>
         </Link>
-        <Typography color="primary">‎€{props.price}</Typography>
+        <Typography className={classes.price} color="primary">
+          ‎€{props.price}
+        </Typography>
       </CardActions>
     </Card>
   );

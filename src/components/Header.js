@@ -32,21 +32,15 @@ const Header = () => {
           <Typography variant="h6" className={classes.title}>
             LOGO
           </Typography>
-          <Button color="inherit">
-            <Link className={classes.links} to="/">
-              Products
-            </Link>
-          </Button>
-          <Button color="inherit">
-            <Link className={classes.links} to="/blogs">
-              Blogs
-            </Link>
-          </Button>
-          <Button color="inherit">
-            <Link className={classes.links} to="/contact">
-              Get Help?
-            </Link>
-          </Button>
+          <Link className={classes.links} to="/">
+            <Button color="inherit">Products</Button>
+          </Link>
+          <Link className={classes.links} to="/blogs">
+            <Button color="inherit">Blogs</Button>
+          </Link>
+          <Link className={classes.links} to="/contact">
+            <Button color="inherit">Get Help?</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
