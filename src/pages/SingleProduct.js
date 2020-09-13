@@ -17,6 +17,13 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
+  container: {
+    width: "100vw",
+    height: "81vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 const SingleProduct = () => {
@@ -36,29 +43,28 @@ const SingleProduct = () => {
     return <>Loading</>;
   }
   return (
-    <Card className={classes.root}>
-      <CardMedia
-        className={classes.media}
-        image={data.img}
-        title="Contemplative Reptile"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-          {data.product}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {data.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+    <div className={classes.container}>
+      <Card className={classes.root}>
+        <CardMedia
+          className={classes.media}
+          image={data.img}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {data.product}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {data.description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" color="primary">
+            BUY ‎€{data.price}
+          </Button>
+        </CardActions>
+      </Card>
+    </div>
   );
 };
 export default SingleProduct;

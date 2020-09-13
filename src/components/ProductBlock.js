@@ -42,12 +42,9 @@ const ProductBlock = (props) => {
       <CardActions>
         <Link to={route} className={classes.link}>
           <Button size="small" color="primary">
-            BUY
+            BUY ‎€{props.price}
           </Button>
         </Link>
-        <Typography className={classes.price} color="primary">
-          ‎€{props.price}
-        </Typography>
       </CardActions>
     </Card>
   );
