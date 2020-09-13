@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     width: "100vw",
-    height: "81vh",
+    height: "100vh",
   },
   media: {
     height: 0,

@@ -10,12 +10,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
       width: "60%",
       height: "400px",
-      margin: "8px",
       margin: "auto",
       marginTop: "50px",
       marginBottom: "50px",
@@ -47,16 +43,20 @@ const Contact = () => {
         <Paper className={classes.paper} elevation={3}>
           <Typography>Please enter:</Typography>
           <form className={classes.form} noValidate autoComplete="off">
-            <TextField id="name" label="Name" />
+            <TextField style={{ marginRight: "15px" }} id="name" label="Name" />
             <TextField id="surname" label="Surname" />
-            <TextField id="email" label="Email" />
+            <TextField
+              style={{ marginLeft: "15px" }}
+              id="email"
+              label="Email"
+            />
           </form>
           <Typography>How can we help you?</Typography>
           <TextField
             style={{ margin: 8 }}
             fullWidth
             id="outlined-basic"
-            label="enter your question here..."
+            label="Enter your question(s) here..."
             variant="outlined"
           />
           <Button size="small" color="primary">

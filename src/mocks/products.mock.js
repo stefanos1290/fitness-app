@@ -17,7 +17,7 @@ export const mockedData = [
   },
   {
     img: "http://lorempixel.com/400/200/sports/",
-    price: "12.5",
+    price: "17",
     product: "Pre Workout",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -25,7 +25,7 @@ export const mockedData = [
   },
   {
     img: "http://lorempixel.com/400/200/sports/",
-    price: "12.5",
+    price: "14",
     product: "Casein Protein",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -33,7 +33,7 @@ export const mockedData = [
   },
   {
     img: "http://lorempixel.com/400/200/sports/",
-    price: "12.5",
+    price: "16.5",
     product: "Egg Protein",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -41,7 +41,7 @@ export const mockedData = [
   },
   {
     img: "http://lorempixel.com/400/200/sports/",
-    price: "12.5",
+    price: "13.5",
     product: "Vegan Protein",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -49,7 +49,7 @@ export const mockedData = [
   },
   {
     img: "http://lorempixel.com/400/200/sports/",
-    price: "12.5",
+    price: "15",
     product: "Protein Bars",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
