@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,12 +12,17 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
       width: theme.spacing(16),
       height: theme.spacing(16),
-      width: "70%",
-      height: "456px",
+      width: "60%",
+      height: "400px",
       margin: "8px",
       margin: "auto",
       marginTop: "50px",
       marginBottom: "50px",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "20px",
+      justifyContent: "space-around",
     },
     paper: {
       width: "500px",
@@ -27,9 +33,7 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1),
         width: "25ch",
       },
-    },
-    bigInput: {
-      width: "60%",
+      TextFieldContainer: {},
     },
   },
 }));
@@ -42,23 +46,21 @@ const Contact = () => {
         <Paper className={classes.paper} elevation={3}>
           <h2>Please enter:</h2>
           <form className={classes.form} noValidate autoComplete="off">
-            <TextField id="standard-basic" label="Name" variant="outlined" />
-            <TextField id="filled-basic" label="Surname" variant="outlined" />
-            <TextField id="outlined-basic" label="Email" variant="outlined" />
+            <TextField id="name" label="Name" />
+            <TextField id="surname" label="Surname" />
+            <TextField id="email" label="Email" />
           </form>
           <h2>How can we help you?</h2>
           <TextField
-            id="outlined-full-width"
-            label="Label"
             style={{ margin: 8 }}
-            placeholder="Placeholder"
-            margin="normal"
-            InputLabelProps={{
-              shrink: true,
-            }}
+            fullWidth
+            id="outlined-basic"
+            label="enter your question here..."
             variant="outlined"
-            className={classes.bigInput}
           />
+          <Button size="small" color="primary">
+            SUBMIT
+          </Button>
         </Paper>
       </div>
     </>
