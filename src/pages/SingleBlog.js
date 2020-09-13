@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     margin: "auto",
     marginTop: "50px",
+    marginBottom: "100px",
+  },
+  container: {
+    width: "100vw",
+    height: "81vh",
   },
   media: {
     height: 0,
@@ -63,44 +68,46 @@ const SingleBlog = () => {
   }
 
   return (
-    <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            {data.author.charAt(0).toUpperCase()}
-          </Avatar>
-        }
-        title={data.author}
-        subheader={data.date}
-      />
-      <CardMedia
-        className={classes.media}
-        image={data.img}
-        title="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          {data.title}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+    <div className={classes.container}>
+      <Card className={classes.root}>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" className={classes.avatar}>
+              {data.author.charAt(0).toUpperCase()}
+            </Avatar>
+          }
+          title={data.author}
+          subheader={data.date}
+        />
+        <CardMedia
+          className={classes.media}
+          image={data.img}
+          title="Paella dish"
+        />
         <CardContent>
-          <Typography paragraph>{data.blog}</Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {data.title}
+          </Typography>
         </CardContent>
-      </Collapse>
-    </Card>
+        <CardActions disableSpacing>
+          <IconButton
+            className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>{data.blog}</Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
+    </div>
   );
 };
 export default SingleBlog;

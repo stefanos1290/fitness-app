@@ -1,26 +1,19 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  AppBar: {
-    // height: "100px",
-    // bottom: 0,
+const useStyles = makeStyles(() => ({
+  container: {
+    width: "100%",
+    height: "100px",
+    position: "static",
+    bottom: 0,
+    backgroundColor: "#3f51b5",
+    boxShadow: "0px 5px 5px 5px black",
   },
 }));
 
-const Fotter = () => {
+const Footer = () => {
   const classes = useStyles();
-  return (
-    <div className={classes.root}>
-      <AppBar className={classes.AppBar} position="static">
-        <Toolbar></Toolbar>
-      </AppBar>
-    </div>
-  );
+  return <div className={classes.container}></div>;
 };
-export default Fotter;
+export default Footer;

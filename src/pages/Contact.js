@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,13 +45,13 @@ const Contact = () => {
     <>
       <div className={classes.root}>
         <Paper className={classes.paper} elevation={3}>
-          <h2>Please enter:</h2>
+          <Typography>Please enter:</Typography>
           <form className={classes.form} noValidate autoComplete="off">
             <TextField id="name" label="Name" />
             <TextField id="surname" label="Surname" />
             <TextField id="email" label="Email" />
           </form>
-          <h2>How can we help you?</h2>
+          <Typography>How can we help you?</Typography>
           <TextField
             style={{ margin: 8 }}
             fullWidth
