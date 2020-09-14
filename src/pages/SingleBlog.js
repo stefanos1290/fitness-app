@@ -24,8 +24,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "100px",
   },
   container: {
-    width: "100vw",
-    height: "100vh",
+    // display: "flex",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // height: "81vh",
   },
   media: {
     height: 0,

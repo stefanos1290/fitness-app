@@ -4,10 +4,10 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(() => ({
   container: {
     width: "100%",
-    height: "100px",
-    position: "static",
+    height: "215px",
+    position: "relative",
     bottom: 0,
-    backgroundColor: "#3f51b5",
+    backgroundColor: "#009688",
     boxShadow: "0px 5px 5px 5px black",
   },
 }));
