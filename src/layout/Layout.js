@@ -6,7 +6,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>{children}</div>
+      <div
+        style={{
+          background: "radial-gradient(45deg, #fe6b8b 30%, #ff8e53 90%)",
+        }}
+      >
+        {children}
+      </div>
       <Footer />
     </>
   );
