@@ -3,49 +3,52 @@ import { useParams } from "react-router-dom";
 import { mockedData } from "../mocks/blogs.mock";
 
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-    margin: "auto",
-    marginTop: "50px",
-    marginBottom: "100px",
-  },
   container: {
-    // display: "flex",
-    // justifyContent: "center",
-    // alignItems: "center",
-    // height: "81vh",
+    background: "linear-gradient(#607d8b, #bf9c87)",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
+  blogCard: {
+    position: "absolute", 
+    width: "80%",
+    height: "70%",
+    background: "white",
+    zIndex: 1,
+    boxShadow: '0 2px 10px rgba(0,0,0,.2)',
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    overflow: "scroll",
+    padding: "30px"
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
+  title: {
+    color: "#474747",
+    fontWeight: '600',
+    fontSize: '28px',
   },
-  expandOpen: {
-    transform: "rotate(180deg)",
+  author: {
+    color: "#607d8b",
+    fontWeight: '600',
+    fontSize: '23px',
+    marginTop: 15
   },
-  avatar: {
-    backgroundColor: red[500],
+  date: {
+    color: "rgba(0, 0, 0, 0.54)",
+    fontSize: '18px',
   },
+  blog: {
+    color: "#474747",
+    fontSize: '18px',
+    marginTop: 15
+  }
 }));
 
 const SingleBlog = () => {
@@ -71,27 +74,30 @@ const SingleBlog = () => {
 
   return (
     <div className={classes.container}>
-      <Card className={classes.root}>
-        <CardHeader
-          avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              {data.author.charAt(0).toUpperCase()}
-            </Avatar>
-          }
-          title={data.author}
-          subheader={data.date}
-        />
+      <div className={classes.blogCard}>
+        <div className={classes.title}>{data.title}</div>
+        <span className={classes.author}>{data.author}</span>
+        <span className={classes.date}>{data.date}</span>
+        <div className={classes.blog}>{data.blog}</div>
+      </div>
+    </div>
+  );
+};
+export default SingleBlog;
+
+{/* <Card className={classes.root}>
         <CardMedia
           className={classes.media}
           image={data.img}
           title="Paella dish"
+          style={{position: "aboslute", top: "0", left: '0'}}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             {data.title}
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        <CardActions disableSpacing style={{position: "aboslute", top: "0", left: '0'}}>
           <IconButton
             className={clsx(classes.expand, {
               [classes.expandOpen]: expanded,
@@ -108,8 +114,4 @@ const SingleBlog = () => {
             <Typography paragraph>{data.blog}</Typography>
           </CardContent>
         </Collapse>
-      </Card>
-    </div>
-  );
-};
-export default SingleBlog;
+      </Card> */}

@@ -2,18 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./routes/Root";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import red from "@material-ui/core/colors/red";
-import teal from "@material-ui/core/colors/teal";
+import blueGrey from "@material-ui/core/colors/blueGrey";
+import brown from "@material-ui/core/colors/brown";
+import Cursor from './components/Cursor'
 
 const theme = createMuiTheme({
   palette: {
-    primary: teal,
-    secondary: red,
+    primary: blueGrey,
+    secondary: brown,
   },
 });
 
 function App() {
-  return <Root />;
+  return (
+    <>
+    <Cursor/>
+  <Root />
+    </>
+  );
 }
 
 ReactDOM.render(
