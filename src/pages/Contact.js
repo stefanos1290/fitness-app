@@ -116,7 +116,7 @@ const Contact = () => {
       <div className={classes.container}>
         <section className={classes.contact}>
           <div className={classes.content}>
-          <h2 style={{color:"#fff"}}>Contact Us</h2>
+          <h2 style={{color:"#fff", fontSize: "45px", margin: 0}}>Contact Us</h2>
           </div>
           <div className={classes.infoContainer}>
             <div className={classes.infoContainerOverlay}></div>
